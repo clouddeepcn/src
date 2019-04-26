@@ -1,0 +1,415 @@
+{
+    "name": "accordion",
+
+    "version": "1.2.0",
+
+    "localName": {
+        "en": "Accordion",
+        "zh-cn": "折叠面板"
+    },
+
+    "icon": "accordion.png",
+
+    "author": {
+        "name": "Minwe",
+        "email": "minwe@yunshipei.com"
+    },
+
+    "description": "类似手风琴的内容折叠模块",
+
+    "poweredBy": "AllMobilize",
+
+    "styleBase": [
+        "variables.less",
+        "mixins.less",
+        "base.less",
+        "grid.less",
+        "block-grid.less",
+        "icon.less",
+        "utility.less"
+    ],
+
+    "template": "accordion.hbs",
+
+    "styleDependencies": [
+        "icon.less",
+        "ui.component.less"
+    ],
+
+    "style": "accordion.less",
+
+    "demoContent": [
+        {
+            "title": "万物互联，无缝计算",
+            "content": "“未来人们将生活在两个融合的世界：由原子组成的物理 世界，以及由比特组成的互联网世界。科技的革新将把 比特世界无限延伸，生活中会有越来越多的设备接入互 联网：手机、平板、电脑、电视、汽车、智能家居、可 穿戴设备等等。云适配要做的，就是通过不断的技术创 新，打破设备之间的信息壁垒，让用户无论使用任何设 备、通过任何方式都能够安全方便地访问信息，打造万 物互联的极致体验！” — 云适配创始人 陈本峰",
+            "active": true
+        },
+        {
+            "title": "重新定义“互联网+”时代的工作方式",
+            "content": "从信息化发展脚步来看，企业在PC端的应用经历了从C/S架构到B/S架构的转变，移动互联网的发展也正在经历这一转变；另一方 面，凭借跨平台跨终端的优势，基于HTML5的企业级应用开发成为主流，更深入的跨平台Web应用成为可能，浏览器将成为互联 网时代的重要入口，并重新定义“互联网+”时代的工作方式。"
+        },
+        {
+            "title": "用创新实现中国梦",
+            "content": "云适配的创立源于自主研发的国际专利技术。从诞生第一天起，我们就立志做一家创新驱动型公司，不做Made In China或者Copy to China，而是要在中国本土做出全世界最先进的技术，把中国的高科技输出到全世界！"
+        }
+    ],
+
+    "themes": [
+        {
+            "name": "default",
+            "desc": "圆角灰边",
+            "options": {
+                "multiple": false
+            },
+            "hook": "hook-am-accordion-default",
+            "variables": [
+                {
+                    "variable": "accordion-item-border-color",
+                    "name": "边框颜色",
+                    "default": "rgba(0, 0, 0, 0.05)",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-item",
+                            "property": "border-top-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-color",
+                    "name": "标题颜色",
+                    "default": "rgba(0, 0, 0, 0.6)",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-color",
+                    "name": "标题激活颜色",
+                    "default": "#428bca",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title:hover",
+                            "property": "color"
+                        },
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-bg-color",
+                    "name": "标题激活背景颜色",
+                    "default": "#eee",
+                    "used": [
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-content-color",
+                    "name": "内容颜色",
+                    "default": "#666",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-content",
+                            "property": "color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [
+                {
+                    "desc": "",
+                    "data": {
+                        "options": {"multiple": true}
+                    }
+                }
+            ]
+        },
+        {
+            "name": "basic",
+            "desc": "极简无边框",
+            "options": {
+                "multiple": false
+            },
+            "hook": "hook-am-accordion-basic",
+            "variables": [
+                {
+                    "variable": "accordion-title-color",
+                    "name": "标题颜色",
+                    "default": "#333",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-color",
+                    "name": "标题激活颜色",
+                    "default": "#428bca",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title:hover",
+                            "property": "color"
+                        },
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-content-color",
+                    "name": "内容颜色",
+                    "default": "#666",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-content",
+                            "property": "color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [
+                {
+                    "desc": "",
+                    "data": {
+                    }
+                }
+            ]
+        },
+        {
+            "name": "gapped",
+            "desc": "扁平分离边框",
+            "options": {
+                "multiple": false
+            },
+            "hook": "hook-am-accordion-gapped",
+            "variables": [
+                {
+                    "variable": "accordion-item-border-color",
+                    "name": "边框颜色",
+                    "default": "rgba(0, 0, 0, 0.1)",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-item",
+                            "property": "border-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-color",
+                    "name": "标题颜色",
+                    "default": "rgba(0, 0, 0, 0.6)",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-color",
+                    "name": "标题激活颜色",
+                    "default": "rgba(0, 0, 0, 0.8)",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title:hover",
+                            "property": "color"
+                        },
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-bg",
+                    "name": "标题激活背景色",
+                    "default": "#f5f5f5",
+                    "used": [
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-content-color",
+                    "name": "内容颜色",
+                    "default": "#666",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-content",
+                            "property": "color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [
+                {
+                    "desc": "",
+                    "data": {
+                    }
+                }
+            ]
+        },
+        {
+            "name": "one",
+            "desc": "简约风格",
+            "options": {
+                "multiple": false
+            },
+            "hook": "hook-am-accordion-one",
+            "variables": [
+                {
+                    "variable": "accordion-item-border-color",
+                    "name": "边框颜色",
+                    "default": "#dfdfdf",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-item",
+                            "property": "border-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-color",
+                    "name": "标题颜色",
+                    "default": "#555",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-content-color",
+                    "name": "内容颜色",
+                    "default": "#666",
+                    "used": [
+                        {
+                            "selector": ".am-accordion-content",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-color",
+                    "name": "标题激活颜色",
+                    "default": "#15afef",
+                    "used": [
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "accordion-title-active-color",
+                    "name": "标题激活背景色",
+                    "default": "#f8f8f8",
+                    "used": [
+                        {
+                            "selector": ".am-active .am-accordion-title",
+                            "property": "background-color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [
+                {
+                    "desc": "",
+                    "data": {
+                    }
+                }
+            ]
+        }
+    ],
+
+    "jsBase": [
+        "core.js",
+        "util.fastclick.js"
+    ],
+
+    "jsDependencies": [
+        "ui.collapse.js"
+    ],
+
+    "script": "accordion.js",
+
+    "api": {
+        "id": {
+            "name": "ID",
+            "desc": "模块自定义ID，遵循CSS ID命名规范",
+            "type": "text",
+            "default": "",
+            "required": false
+        },
+        "className": {
+            "name": "Class",
+            "desc": "用户自定义模块class，遵循 CSS class 命名规范",
+            "placeholder": "css类名，多个用空格分隔",
+            "type": "text",
+            "default": "",
+            "required": false
+        },
+        "theme": {
+            "name": "主题",
+            "desc": "模块主题",
+            "type": "select",
+            "default": "default",
+            "required": true,
+            "dataList": "<%= pkg.themes %>"
+        },
+        "options": {
+            "multiple": {
+                "name": "同时展开多个面板",
+                "desc": "是否允许同时展开多个面板",
+                "type": "select",
+                "default": false,
+                "required": false,
+                "dataList": [
+                    {
+                        "value": "false",
+                        "title": "不启用",
+                        "selected": true
+                    },
+                    {
+                        "value": true,
+                        "title": "启用"
+                    }
+                ]
+            }
+        },
+
+        "content": {
+            "type": "Array",
+            "item": {
+                "title": {
+                    "type": "text",
+                    "comment": "面板标题"
+                },
+                "content": {
+                    "type": "html",
+                    "comment": "面板内容"
+                }
+            }
+        }
+    },
+
+    "readme": "http://docs.yunshipei.com/amui/#accordion",
+
+    "example": "/*\n 此模块的使用方法：采集原PC网站上的标题以及内容的数据放到此模块的数据里。\n \n 常用用途：通常用来采集一些纯内容列表的页面。\n \n 了解AMUI折叠面板的模块详情，请访问http://ide.yunshipei.com/doc/amui/#accordion。\n\n         示例代码：\n         var data = [];\n         $(\".xx\").find(\"xx\").each(function(){\n             data.push({\n                 \"title\": $(this).find(\"xx\").text(), \n                 \"content\": $(this).find(\"xx\").html() \n             });\n         });\n         return data;\n*/\nvar data = [\n    {\n        \"title\": \"\",    // 面板标题 填写大标题\n        \"content\": \"\"   // 面板内容 填写下拉菜单中的内容\n    }\n];\n\nreturn data;\n",
+
+    "hidden": false
+}

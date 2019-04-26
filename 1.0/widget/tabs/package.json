@@ -1,0 +1,331 @@
+{
+  "name": "tabs",
+  "version": "3.0.0",
+  "author": {
+    "name": "Shengli",
+    "email": "china_victory@yunshipei.com"
+  },
+  "localName": {
+    "en": "Tabs",
+    "zh-cn": "选项卡"
+  },
+  "icon": "tabs.png",
+  "description": "用于多标签切换",
+  "poweredBy": "AllMobilize",
+  "styleBase": [
+    "variables.less",
+    "mixins.less",
+    "base.less",
+    "grid.less",
+    "block-grid.less",
+    "icon.less",
+    "utility.less"
+  ],
+  "template": "tabs.hbs",
+  "styleDependencies": [
+    "ui.component.less",
+    "ui.tabs.less",
+    "animation.less"
+  ],
+  "style": "tabs.less",
+  "demoContent": [
+    {
+      "title": "Xcloud",
+      "content": "【Xcloud网站跨屏云】能够帮助企业以及政府机构快速、安全、高 效地将现有PC版网页适配成HTML5移动应用。网页指所有网页 形式的应用，包括官网、门户、电商、论坛等。跨屏云可以根 据用户设备，实时重新渲染网页的内容，使之以最佳的展示及 交互方式呈现，帮助企业高效地将应用内容适配分发到各种设 备终端上，让用户无论在任何设备/平台上都能享受到极致的体 验，提高用户满意度和转化率。",
+      "active": 1
+    },
+    {
+      "title": "Enterplorer",
+      "content": "【云适配企业浏览器Enterplorer】为企业提供安全、可控、可扩 展的“统一工作平台”，含PC版和移动版。Enterplorer PC 版能够兼容多种内核，并根据管理员预设的参数自动切换内 核，并具备多重安全控制策略，方便管理员对用户、设备、 应用等进行多层次管理；Enterplorer移动版基于云适配自主 创新的智能感知渲染引擎技术，为企业提供统一工作平台入 口，实现与现有组织架构同步，让指定企业员工在任意时间 任意地点，在外网安全、流畅地访问企业内网资源。"
+    },
+    {
+      "title": "AmazeUI",
+      "content": "【Amaze UI Web】采用国际最前沿的“组件式开发”以及“移动优先”的设计理 念，基于其丰富的组件，开发者可通过简单拼装即可快速构建 出HTML5网页应用，上线仅半年，Amaze UI就成为了国内最流 行的前端框架，目前在Github上收获Star数近万，服务于全球 50万开发者 【Amaze UI Touch】 为企业移动开发而生，采用国际最前沿的“组件式开发”的先 进设计理念，专注于移动端UI展现及交互体验效果，企业开发 者可通过简单拼装，即可构建出与原生APP相媲美的HTML5企 业级应用。"
+    }
+  ],
+  "themes": [
+    {
+      "name": "default",
+      "desc": "蓝色选项卡",
+      "options": {
+        "cols": 3
+      },
+      "hook": "hook-am-tabs-default",
+      "variables": [
+        {
+          "variable": "tabs-nav-bg",
+          "name": "标签背景色",
+          "default": "#eee",
+          "used": [
+            {
+              "selector": ".am-tabs-nav",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-color",
+          "name": "标签颜色",
+          "default": "#333",
+          "used": [
+            {
+              "selector": ".am-tabs-nav a",
+              "property": "color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-bg",
+          "name": "激活标签背景色",
+          "default": "#0e90d2",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-color",
+          "name": "激活标签颜色",
+          "default": "#fff",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "color"
+            }
+          ]
+        }
+      ],
+      "demos": [
+        {
+          "data": {
+            "options": {
+              "cols": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "d2",
+      "desc": "下边框选项卡",
+      "options": {
+        "cols": 3
+      },
+      "hook": "hook-am-tabs-d2",
+      "variables": [
+        {
+          "variable": "tabs-nav-bg",
+          "name": "标签背景色",
+          "default": "#eee",
+          "used": [
+            {
+              "selector": ".am-tabs-nav",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-color",
+          "name": "标签颜色",
+          "default": "#333",
+          "used": [
+            {
+              "selector": ".am-tabs-nav a",
+              "property": "color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-bg",
+          "name": "激活标签背景色",
+          "default": "#0e90d2",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-color",
+          "name": "激活标签颜色",
+          "default": "#fff",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "color"
+            },
+            {
+              "selector": ".am-tabs-nav > .am-active",
+              "property": "border-bottom-color"
+            },
+            {
+              "selector": ".am-tabs-nav > .am-active:after",
+              "property": "border-bottom-color"
+            }
+          ]
+        }
+      ],
+      "demos": [
+        {
+          "data": {
+            "options": {
+              "cols": "3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "one",
+      "desc": "简约风格",
+      "options": {
+        "cols": 3
+      },
+      "hook": "hook-am-tabs-one",
+      "variables": [
+        {
+          "variable": "tabs-color",
+          "name": "标签背景色",
+          "default": "#fff",
+          "used": [
+            {
+              "selector": ".am-tabs-nav",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-border-color",
+          "name": "标签边框颜色",
+          "default": "#15afef",
+          "used": [
+            {
+              "selector": ".am-tabs-nav, .am-tabs-nav > li + li",
+              "property": "border-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-color",
+          "name": "标签颜色",
+          "default": "#15afef",
+          "used": [
+            {
+              "selector": ".am-tabs-nav a",
+              "property": "color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-bg",
+          "name": "激活标签背景色",
+          "default": "#15afef",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "background-color"
+            }
+          ]
+        },
+        {
+          "variable": "tabs-nav-active-color",
+          "name": "激活标签颜色",
+          "default": "#15afef",
+          "used": [
+            {
+              "selector": ".am-tabs-nav > .am-active a",
+              "property": "color"
+            }
+          ]
+        }
+      ],
+      "demos": [
+        {
+          "data": {
+            "options": {
+              "cols": "3"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "jsBase": [
+    "core.js",
+    "util.fastclick.js"
+  ],
+  "jsDependencies": [
+    "ui.tabs.js",
+    "util.hammer.js"
+  ],
+  "script": "tabs.js",
+  "api": {
+    "id": {
+      "name": "ID",
+      "desc": "模块自定义ID，遵循CSS ID命名规范",
+      "type": "text",
+      "default": "",
+      "required": false
+    },
+    "className": {
+      "name": "Class",
+      "desc": "用户自定义模块class，遵循 CSS class 命名规范",
+      "type": "text",
+      "placeholder": "css类名，多个用空格分隔",
+      "default": "",
+      "required": false
+    },
+    "theme": {
+      "name": "主题",
+      "desc": "模块主题",
+      "type": "select",
+      "default": "default",
+      "required": true,
+      "dataList": "<%= pkg.themes %>"
+    },
+    "options": {
+      "noSwipe": {
+        "name": "触控操作",
+        "desc": "是否禁用 Tabs 触控操作",
+        "type": "select",
+        "required": false,
+        "default": 0,
+        "dataList": [
+          {
+            "value": 0,
+            "title": "启用",
+            "selected": 1
+          },
+          {
+            "value": 1,
+            "title": "禁用"
+          }
+        ]
+      }
+    },
+    "content": {
+      "type": "Array",
+      "item": {
+        "title": {
+          "type": "text",
+          "desc": "Tab 标题"
+        },
+        "content": {
+          "type": "html",
+          "desc": "Tab 内容"
+        },
+        "active": {
+          "type": "text",
+          "desc": "激活状态（不激活则留空）",
+          "hidden": true
+        }
+      }
+    }
+  },
+  "readme": "http://docs.yunshipei.com/amui/#tabs",
+  "example": "/*\n tabs: 1.0\n\n 此模块的使用方法：采集原PC网站上的tab切换数据，在手机页面上生成tab切换效果。\n\n 常用用途：通常用来采集一组tab切换标题以及文字等信息。\n\n  了解AMUI的模块详情，请访问http://ide.yunshipei.com/doc/amui/#tabs。\n\n         示例代码：\n\n         var data = [];\n         $(\".listpart\").eq(1).find(\"li\").each(function(){\n             data.push({\n                 \"title\": $(this).find(\".news-pic\").find(\"img\").src(),\n                 \"content\": $(this).find(\".news-pic\").find(\"a\")html(),\n                 \"active\": \"\"\n             });\n         });\n         return data;\n*/\n\nvar data = [\n    {\n        \"title\":   \"\",   // 选项卡标题\n        \"content\": \"\",   // 选项卡内容\n        \"active\":  false // 是否激活当前选项卡，true | false，只允许一个 Tab 标记为激活\n    }\n];\n\nreturn data;\n",
+  "hidden": false
+}

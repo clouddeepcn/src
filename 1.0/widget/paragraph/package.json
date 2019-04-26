@@ -1,0 +1,297 @@
+{
+    "name": "paragraph",
+
+    "version": "1.0.0",
+
+    "localName": {
+        "en": "Paragraph",
+        "zh-cn": "段落"
+    },
+
+    "icon": "paragraph.png",
+
+    "author": {
+        "name": "Shengli",
+        "email": "china_victory@yunshipei.com"
+    },
+
+    "description": "文本段落",
+
+    "poweredBy": "AllMobilize",
+
+    "styleBase": [
+        "variables.less",
+        "mixins.less",
+        "base.less",
+        "grid.less",
+        "block-grid.less",
+        "icon.less",
+        "utility.less"
+    ],
+
+    "template": "paragraph.hbs",
+
+    "styleDependencies": [
+        "button.less",
+        "ui.share.less",
+        "ui.modal.less",
+        "ui.pureview.less"
+    ],
+
+    "style": "paragraph.less",
+
+    "demoContent": {
+        "content": "<img src=http://cdn.amazeui.org/src/1.0/img/allmobilize.jpg ><p class=paragraph-default-p>云适配(AllMobilize Inc.)是全球领先的企业级浏览器与HTML5解决方案供应商，由前微软美国总部IE浏览器核心研发团 队成员在美国西雅图创立，并获得了微软的扶持以及达晨创投、晨兴资本、IDG资本、天创资本、科大讯飞等国内外顶 级风投机构的投资，是一家致力于自主创新技术实现和运用的高科技企业。</p><p>云适配基于自主研发的网站跨屏云获得了多项国际发明专利，其强大的云端智能计算便会根据不同的用户设备及场景， 实时推送不同的适配引擎，让用户无论在任何设备、任何平台或者任何场景下都能享受到极致的跨屏体验。</p><p>云适配基于自主创新国产企业浏览器，打造“统一办公入口+安全管理平台+移动开发工具”一站式移动化解决方案，可以 迅速为政府、教育、金融、制造等行业构建一套安全、便捷、跨平台的HTML5移动应用系统（含内网或外网），帮助各 类企业实现跨屏营销和移动办公战略。</p>"
+    },
+
+    "themes": [
+        {
+            "name": "default",
+            "desc": "默认",
+            "hook": "hook-am-paragraph-default",
+            "variables": [
+                {
+                    "variable": "paragraph-bg",
+                    "name": "背景色",
+                    "default": "transparent",
+                    "used": [
+                        {
+                            "selector": "",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-color",
+                    "name": "文字颜色",
+                    "default": "#333",
+                    "used": [
+                        {
+                            "selector": "",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-link-color",
+                    "name": "链接颜色",
+                    "default": "#0e90d2",
+                    "used": [
+                        {
+                            "selector": "a",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-img-border-color",
+                    "name": "图片边框颜色",
+                    "default": "#eee",
+                    "used": [
+                        {
+                            "selector": "img",
+                            "property": "border-color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [{
+                "data": {
+                    "options": {
+                        "imgLightbox": true,
+                        "tableScrollable": true
+                    }
+                }
+            }]
+        },
+        {
+            "name": "one",
+            "desc": "简约风格",
+            "hook": "hook-am-paragraph-one",
+            "variables": [
+                {
+                    "variable": "paragraph-bg-color",
+                    "name": "背景颜色",
+                    "default": "#fff",
+                    "used": [
+                        {
+                            "selector": "",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-text-color",
+                    "name": "文本颜色",
+                    "default": "#666",
+                    "used": [
+                        {
+                            "selector": "",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-h3-color",
+                    "name": "h1-h6标题颜色",
+                    "default": "#000",
+                    "used": [
+                        {
+                            "selector": "h1",
+                            "property": "color"
+                        },
+                        {
+                            "selector": "h2",
+                            "property": "color"
+                        },
+                        {
+                            "selector": "h3",
+                            "property": "color"
+                        },
+                        {
+                            "selector": "h4",
+                            "property": "color"
+                        },
+                        {
+                            "selector": "h5",
+                            "property": "color"
+                        },
+                        {
+                            "selector": "h6",
+                            "property": "color"
+                        }
+
+                    ]
+                },
+                {
+                    "variable": "paragraph-a-color",
+                    "name": "链接颜色",
+                    "default": "#000",
+                    "used": [
+                        {
+                            "selector": "a",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "paragraph-hr-color",
+                    "name": "分隔线颜色",
+                    "default": "#dfdfdf",
+                    "used": [
+                        {
+                            "selector": "hr",
+                            "property": "background-color"
+                        }
+                    ]
+                }
+            ],
+            "demos": [{
+                "data": {
+                    "options": {
+                        "imgLightbox": true,
+                        "tableScrollable": true
+                    }
+                }
+            }]
+        }
+    ],
+
+    "jsBase": [
+        "core.js",
+        "util.fastclick.js"
+    ],
+
+    "jsDependencies": [
+        "ui.iscroll-lite.js",
+        "zepto.pinchzoom.js",
+        "ui.pureview.js",
+        "ui.share.js",
+        "ui.modal.js"
+    ],
+
+    "script": "paragraph.js",
+
+    "api": {
+        "id": {
+            "name": "ID",
+            "desc": "模块自定义ID，遵循CSS ID命名规范",
+            "type": "text",
+            "default": "",
+            "required": false
+        },
+
+        "className": {
+            "name": "Class",
+            "desc": "用户自定义模块class，遵循 CSS class 命名规范",
+            "type": "text",
+            "placeholder": "css类名，多个用空格分隔",
+            "default": "",
+            "required": false
+        },
+
+        "theme": {
+            "name": "主题",
+            "desc": "模块主题",
+            "type": "select",
+            "default": "default",
+            "required": true,
+            "dataList": "<%= pkg.theme %>"
+        },
+
+        "options": {
+            "imgLightbox": {
+                "name": "图片查看器",
+                "desc": "双击图片，可放大显示",
+                "type": "select",
+                "required": false,
+                "default": false,
+                "dataList": [
+                    {
+                        "value": true,
+                        "title": "开启"
+                    },
+                    {
+                        "value": false,
+                        "title": "关闭",
+                        "selected": true
+                    }
+                ]
+            },
+            "tableScrollable": {
+                "name": "表格滚动",
+                "desc": "超出可视区的表格，可以拖拽",
+                "type": "select",
+                "required": false,
+                "default": false,
+                "dataList": [
+                    {
+                        "value": true,
+                        "title": "开启"
+                    },
+                    {
+                        "value": false,
+                        "title": "关闭",
+                        "selected": true
+                    }
+                ]
+            }
+        },
+
+        "content": {
+            "type": "Object",
+            "item": {
+                "content": {
+                    "type": "html",
+                    "desc": "段落内容"
+                }
+            }
+        }
+    },
+
+    "readme": "http://docs.yunshipei.com/amui/#paragraph",
+
+    "example": "/*\n 此模块的使用方法： 将原PC网页的数据（dom结构）提取放在这里，最后显示在模块界面上。\n \n 常用用途：通常用来采放整个的dom内容（在有数据交互的页面中使用较多）。\n \n 了解AMUI段落的模块详情，请访问http://ide.yunshipei.com/doc/amui/#paragraph。\n\n         示例代码：\n        \n         var data = {\n            \"content\": $(\".xxx\").html()\n         };\n         return data;\n    \n*/\n\nvar data = {\n    \"content\": \"\"   //填写paragraph的内容\n};\nreturn data;\n",
+
+    "hidden": false
+}
